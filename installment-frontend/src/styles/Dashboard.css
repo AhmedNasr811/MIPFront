@@ -1,0 +1,21 @@
+.dashboard {
+  padding: 40px;
+  text-align: center;
+  background-color: #f4faff;
+  min-height: 100vh;
+}
+
+.dashboard h2 {
+  color: #1e3a8a;
+}
+
+.logout-button {
+  margin-top: 30px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}

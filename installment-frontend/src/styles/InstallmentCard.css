@@ -1,0 +1,28 @@
+.installment-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 15px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.installment-card p {
+  margin: 8px 0;
+}
+
+.pay-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pay-button:hover {
+  background-color: #1d4ed8;
+}
