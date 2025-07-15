@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import api from '../api';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
+import Header from '../components/Header';
 
 
 function Register() {
@@ -21,24 +22,27 @@ function Register() {
   };
 
   return (
-    <form className="register-form" onSubmit={handleSubmit}>
-      <h2>Register</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        required
-        onChange={e => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        required
-        onChange={e => setPassword(e.target.value)}
-      />
-      <button type="submit">Register</button>
-      <p>Already have an account? <a href="/">Login</a></p>
+    <>
+      <Header />
+      <form className="register-form" onSubmit={handleSubmit}>
+        <h2>Register</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          onChange={e => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          onChange={e => setPassword(e.target.value)}
+        />
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="/">Login</a></p>
 
-    </form>
+      </form>
+    </>
   );
 }
 
