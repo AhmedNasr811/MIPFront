@@ -111,9 +111,6 @@ function ProjectDetails({ theme, setTheme }) {
               <span style={{ fontSize: '1.2em', display: 'flex', alignItems: 'center' }}>←</span>
               My Projects
             </button>
-            <button onClick={handleUnpayAll} style={{ marginLeft: 16, background: '#fff', color: '#3978f6', border: '1.5px solid #3978f6', borderRadius: 999, padding: '7px 18px', fontWeight: 600, cursor: 'pointer', fontSize: '0.98rem' }}>
-              Unpay All (Dev)
-            </button>
           </div>
 
           {project.units && project.units.length > 0 ? (
@@ -243,45 +240,47 @@ function ProjectDetails({ theme, setTheme }) {
               })}
               
               {project.units.some(unit => unit.payments && unit.payments.length > 0) && (
-                <button
-                  className="pay-all-btn"
-                  style={{ 
-                    marginTop: 32, 
-                    width: '100%', 
-                    fontSize: '1.1rem',
-                    padding: '16px 0',
-                    borderRadius: '999px',
-                    boxShadow: '0 4px 16px rgba(57,120,246,0.15)',
-                    background: '#3978f6',
-                    color: '#fff',
-                    border: 'none',
-                    fontWeight: 700,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: 12,
-                    transition: 'background 0.2s, box-shadow 0.2s',
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#2456b6';
-                    e.currentTarget.querySelector('.btn-icon').style.transform = 'translateX(0)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#3978f6';
-                    e.currentTarget.querySelector('.btn-icon').style.transform = 'translateX(-16px)';
-                  }}
-                  disabled={selectedPayments.length === 0}
-                  onClick={handlePaySelected}
-                >
-                  <span className="btn-icon" style={{
-                    display: 'inline-block',
-                    transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
-                    transform: 'translateX(-16px)'
-                  }}>
-                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="3" stroke="#fff" strokeWidth="2"/><path d="M2 10h20" stroke="#fff" strokeWidth="2"/><rect x="6" y="14" width="4" height="2" rx="1" fill="#fff"/></svg>
-                  </span>
-                  Pay Selected ({selectedPayments.length} payments)
-                </button>
+                <div style={{ display: 'flex', justifyContent: 'center', width: '35%', margin: '0 auto' }}>
+                  <button
+                    className="pay-all-btn"
+                    style={{ 
+                      marginTop: 32, 
+                      width: '100%',
+                      fontSize: '1.1rem',
+                      padding: '8px 0',
+                      borderRadius: '999px',
+                      boxShadow: '0 4px 16px rgba(57,120,246,0.15)',
+                      background: '#3978f6',
+                      color: '#fff',
+                      border: 'none',
+                      fontWeight: 700,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: 12,
+                      transition: 'background 0.2s, box-shadow 0.2s',
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = '#2456b6';
+                      e.currentTarget.querySelector('.btn-icon').style.transform = 'translateX(0)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = '#3978f6';
+                      e.currentTarget.querySelector('.btn-icon').style.transform = 'translateX(-16px)';
+                    }}
+                    disabled={selectedPayments.length === 0}
+                    onClick={handlePaySelected}
+                  >
+                    <span className="btn-icon" style={{
+                      display: 'inline-block',
+                      transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
+                      transform: 'translateX(-16px)'
+                    }}>
+                      <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="3" stroke="#fff" strokeWidth="2"/><path d="M2 10h20" stroke="#fff" strokeWidth="2"/><rect x="6" y="14" width="4" height="2" rx="1" fill="#fff"/></svg>
+                    </span>
+                    Pay Selected ({selectedPayments.length} payments)
+                  </button>
+                </div>
               )}
             </>
           ) : (

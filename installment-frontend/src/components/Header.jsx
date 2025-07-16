@@ -11,7 +11,16 @@ const Header = () => {
         alt="MIP Logo"
         onClick={() => navigate('/dashboard')}
         className="global-mip-logo"
-        style={{ cursor: 'pointer', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.12))', pointerEvents: 'auto' }}
+        style={{
+          cursor: 'pointer',
+          filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.12))',
+          pointerEvents: 'auto',
+          marginTop: '16px',
+          marginLeft: '8px',
+          width: 'auto',
+          objectFit: 'contain',
+          background: 'transparent',
+        }}
       />
     </div>
   );

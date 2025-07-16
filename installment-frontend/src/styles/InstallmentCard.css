@@ -1,11 +1,13 @@
 .installment-card {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 4vw 3vw;
+  border-radius: 2vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  margin: 15px auto;
-  max-width: 500px;
+  margin: 3vw auto;
+  max-width: 98vw;
+  width: 100%;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .installment-card p {
